@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: auto;
+            padding: auto;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            height: 70px;
+        }
+
+        .samadengan, .reset {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid transparent;
+        }
+
+        #isi {
+            float: center;
+            width: 100%;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <input type="text" id="isi">
+        <table>
+            <tr>
+                <td colspan="4"><input type="button" value="c" class="reset" onclick="reset()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="tulis('1')"></td>
+                <td><input type="button" value="2" onclick="tulis('2')"></td>
+                <td><input type="button" value="3" onclick="tulis('3')"></td>
+                <td><input type="button" value="*" onclick="tulis('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="tulis('4')"></td>
+                <td><input type="button" value="5" onclick="tulis('5')"></td>
+                <td><input type="button" value="6" onclick="tulis('6')"></td>
+                <td><input type="button" value="/" onclick="tulis('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="tulis('7')"></td>
+                <td><input type="button" value="8" onclick="tulis('8')"></td>
+                <td><input type="button" value="9" onclick="tulis('9')"></td>
+                <td><input type="button" value="+" onclick="tulis('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="tulis('0')"></td>
+                <td><input type="button" value="." onclick="tulis('.')"></td>
+                <td><input type="button" value="%" onclick="tulis('%')"></td>
+                <td><input type="button" value="-" onclick="tulis('-')"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="button" value="=" class="samadengan" onclick="hitung()"></td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
+
+<script>
+        let output = document.getElementById('isi');
+
+        function tulis(angka) {
+            output.value += angka;
+        }
+
+        function hitung() {
+            output.value = eval(output.value);
+            console.log(output);
+        }
+
+        function reset() {
+            output.value = "";
+        }
+</script>

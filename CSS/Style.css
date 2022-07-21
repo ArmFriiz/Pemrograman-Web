@@ -1,0 +1,98 @@
+*{
+	box-sizing: border-box;
+	margin: auto;
+	padding: auto;
+	height: auto;
+	width: auto;
+}
+
+.main:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.Header{
+	text-align: center;
+	background: grey;
+	width: auto;
+	height: auto;
+	color: white;
+
+	padding: 30px;
+}
+
+.Header a{
+	position: relative;
+	color: black;
+	background-color: white;
+	text-align: center;
+	text-decoration: none;
+	bottom: 10px;
+	
+	padding: 15px;
+}
+
+.Header a:hover{
+	background-color: #ddd;
+}
+
+.item{
+	width: auto;
+	height: auto;
+	color: white;
+	background-color: transparent;
+
+	padding: 5px;
+	margin: 5px;
+}
+
+.web{
+	float: left;
+	width: 75%;
+	background-color: transparent;
+
+	margin-left: 12px;
+}
+
+.subweb{
+	float: right;
+	width: auto;
+	background-color: transparent;
+
+	margin-right: auto;
+}
+
+.Kalender{
+	background: white;
+	width: auto;
+	height: auto;
+
+	padding: 10px;
+}
+
+.Kalkulator{
+	background: white;
+	width: auto;
+	height: auto;
+
+	padding: 10px;
+}
+
+.keterangan{
+	background: white;
+	color: black;	
+}
+
+.Footer{
+	background: gray;
+	
+	width: 100%;
+	height: 50px;
+	line-height: auto;
+	color: white;
+	bottom: 0px;
+	position: fixed;
+
+	padding: 15px;
+}
